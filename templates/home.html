@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - LMS System{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h2>Welcome to the LMS System</h2>
+        <p>Explore our learning management system and take your learning experience to the next level.</p>
+</section>
+
+
+<section class="features">
+    <h2>Our Features</h2>
+    <div class="feature">
+        <img src="{{ url_for('static', filename='img2.svg') }}" alt="Feature One" class="feature-image">
+        <h3>Customizable Learning Paths</h3>
+        <p>Design and customize learning paths tailored to your needs. Our LMS allows you to create personalized learning experiences.</p>
+    </div>
+    <div class="feature">
+        <img src="{{ url_for('static', filename='img3.webp') }}" alt="Feature Two" class="feature-image">
+        <h3>Interactive Courses</h3>
+        <p>Engage with interactive courses that include multimedia content, quizzes, and discussion forums.</p>
+    </div>
+    <div class="feature">
+        <img src="{{ url_for('static', filename='img4.jpg') }}" alt="Feature Three" class="feature-image">
+        <h3>Advanced Analytics</h3>
+        <p>Track progress and performance with our advanced analytics tools to make data-driven decisions.</p>
+    </div>
+</section>
+
+<section class="pricing">
+    <h2>Pricing Plans</h2>
+    <div class="pricing-plan">
+        <img src="{{ url_for('static', filename='img6.webp') }}" alt="Basic Plan" class="pricing-image">
+        <h3>Basic Plan for students</h3>
+        <p>$29/month</p>
+        <p>Perfect for individuals or small teams. Includes essential features like course creation and support.</p>
+        <a href="#" class="cta-button">Choose Plan</a>
+    </div>
+    <div class="pricing-plan">
+        <img src="{{ url_for('static', filename='img7.png') }}" alt="Pro Plan" class="pricing-image">
+        <h3>Pro Plan for teachers and profesors</h3>
+        <p>$59/month</p>
+        <p>For growing teams and organizations. Offers advanced features and priority support.</p>
+        <a href="#" class="cta-button">Choose Plan</a>
+    </div>
+    <div class="pricing-plan">
+        <img src="{{ url_for('static', filename='img5.webp') }}" alt="Enterprise Plan" class="pricing-image">
+        <h3>Enterprise Plan for colleges and universities</h3>
+        <p>$99/month</p>
+        <p>For large organizations with complex needs. Includes all features, dedicated support, and advanced customization.</p>
+        <a href="#" class="cta-button">Choose Plan</a>
+    </div>
+</section>
+{% endblock %}

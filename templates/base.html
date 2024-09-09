@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}LMS System{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>LMS System</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="{{ url_for('login') }}" class="login-btn">Log In</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h2>About Company</h2>
+                <p>At Super Infolabs Private Limited, we offer an affordable and comprehensive range of IT solutions services that empower growth and enhance efficiency.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Case Study</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Upcoming</a></li>
+                </ul>
+            </div>
+            <div class="footer-resources">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Support Center</a></li>
+                </ul>
+                <div class="newsletter-signup">
+                    <h3>Join our Newsletter</h3>
+                    <form action="#" method="post">
+                        <input type="email" name="email" placeholder="email@example.com" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p>We will send you weekly updates for better product management.</p>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#" class="social-icon facebook">Facebook</a>
+                <a href="#" class="social-icon instagram">Instagram</a>
+                <a href="#" class="social-icon linkedin">LinkedIn</a>
+            </div>
+        </div>
+        <p>&copy; 2024 Techogy. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>

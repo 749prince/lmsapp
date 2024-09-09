@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Login - LMS System{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h2>Login to Your Account</h2>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32) }}<br>
+        </div>
+        <div>
+            {{ form.password.label }}<br>
+            {{ form.password(size=32) }}<br>
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+</section>
+{% endblock %}
